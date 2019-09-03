@@ -49,7 +49,26 @@ navItem[2].textContent = siteContent["nav"]["nav-item-3"];
 navItem[3].textContent = siteContent["nav"]["nav-item-4"];
 navItem[4].textContent = siteContent["nav"]["nav-item-5"];
 navItem[5].textContent = siteContent["nav"]["nav-item-6"];
+      // make it green
+        navItem.forEach(function(link) {
+          return link.style.color = "green";
+        });      
 
+      // prepend and append two new navi items
+        let nav = document.querySelector('nav');
+        
+        let homeLink = document.createElement('a');
+        homeLink.href = "index.html";
+        homeLink.textContent = "Home";
+        homeLink.style.color = "green";
+        nav.prepend(homeLink);
+
+        let faqLink = document.createElement('a');
+        faqLink.href = "";
+        faqLink.textContent = "FAQ";
+        faqLink.style.color = "green";
+        nav.appendChild(faqLink);
+        
 // cta
 let header = document.querySelector('.cta h1');
 header.textContent = siteContent["cta"]["h1"];
